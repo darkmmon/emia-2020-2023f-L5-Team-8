@@ -1,7 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
-import pandas as pd
 import os.path
+
+import client
 
 
 def validation(target_user, target_pass,DateOfBirth):
@@ -40,6 +41,7 @@ def check_user(target_user,target_pass):
     if flag == False:
         messagebox.showinfo(title="Message", message="The username dosen't match with the password")
         login()
+
 def signup():
     signup_window = tk.Tk()
     signup_window.geometry("800x500")
@@ -74,7 +76,6 @@ def signup():
     button_2 = tk.Button(signup_window, text= "Enter", font= ("Arial", 15), command=lambda :validation(my_user_name.get(),my_password.get(),my_dayOfBirth.get()))
     button_2.pack()
     signup_window.mainloop()
-
 
 
 def login():
@@ -116,6 +117,9 @@ def login():
 
     sign_up_button = tk.Button( main_window, text="Click here to creat an account", font= ("Arial", 15),command=signup)
     sign_up_button.pack()
+
+    Chatroom_button = tk.Button( main_window, text="Go to Chatroom", font= ("Arial", 15),command=client.chatroom_main)
+    Chatroom_button.pack()
 
     main_window.mainloop()
 
