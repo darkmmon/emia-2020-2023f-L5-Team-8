@@ -240,7 +240,7 @@ body{
 .course{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-    gap: 11px;
+    gap:11px;
 }
 .course-box{
     width: 300px;
