@@ -1,0 +1,90 @@
+<html>
+<head>
+  <link rel="stylesheet" href="chat.css">
+</head>
+<header>
+     <a href="../index.html" class="logo">
+        <img src="../img/logo.png" width="200" 
+        height="50" alt="">
+     </a>
+     <input type="text" placeholder="search"/>    
+     <nav>
+        <i class='fas fa-home'></i>
+        <i class='far fa-paper-plane'></i>
+        <i class='far fa-compass'></i>
+        <i class='far fa-heart'></i>
+        <div id="user">
+          <a href="../personal profile/profile.html">
+            <img id="pic" src="https://images.unsplash.com/profile-fb-1535725706-502eab0fee8e.jpg?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128" />
+          </a>
+        </div>
+    </nav>
+</header>
+<script src="chat.js"></script>
+  <main>
+    <div class="preview">
+	<div id="user-name">Courses <i class='fas fa-angle-down'></i></div>
+	  <div>
+        <div id="course" >
+          <span id="name" onclick="changeTitle(this)">MATH1013</span>
+        </div>
+      </div>
+      <div>
+        <div id="course" >
+          <span id="name" onclick="changeTitle(this)">EMIA2020</span>
+        </div>
+      </div>
+      <div>
+        <div id="course" >
+          <span id="name" onclick="changeTitle(this)">COMP1021</span>
+        </div>
+      </div>
+      <div>
+        <div id="course" >
+          <span id="name" onclick="changeTitle(this)">LANG1402</span>
+        </div>
+      </div>
+      <div>
+        <div id="course" >
+          <span id="name" onclick="changeTitle(this)">HMAW1000</span>
+        </div>
+      </div>
+    </div>
+    <div class="chats" id="chatroom">
+      <div class="chat-banner">
+        <div>
+          <div id="course-name"> EMIA2020 </div>
+            </div>
+        <div><i class='fas fa-info'></i></div>
+      </div>
+      <div class="sender" onclick="like()">
+        <a href="../friend request/friend_request2.html"><div class="sender-title" style ="color:blue;"> Lolo </div></a>
+        Have you guys done the hw this week?</div>
+        <div id="heart">❤️</div>
+	    <div class="sender" onclick="like()">
+        <a href="../friend request/friend_request.html"><div class="sender-title" style ="color:red;"> Nelson </div></a>
+        Close! missing 1 question</div>
+        <div id="heart">❤️</div>
+        <div class="receiver">Just now lol</div>
+      <div class="sender" onclick="like()">
+        <a href="../friend request/friend_request2.html"><div class="sender-title" style ="color:blue;"> Lolo </div></a>
+        Can anyone teach me the q5? Idk where to start..</div>
+        <div id="heart">❤️</div>
+        <div class="receiver">Just take log on both side? I did it like that.</div>
+      <div class="sender" onclick="like()">
+        <a href="../friend request/friend_request2.html"><div class="sender-title" style ="color:blue;"> Lolo </div></a>
+        Ohhh Thanks!! I was stuck on trying to group the terms</div>
+        <div id="heart">❤️</div>
+        <div class="receiver">Maths do be like that sometimes</div>
+      <div class="sender" onclick="like()">
+        <a href="../friend request/friend_request.html"><div class="sender-title" style ="color:red;"> Nelson </div></a>
+        Oh I was stuck on that question too!</div>
+        <div id="heart">❤️</div>
+      <div class="user-input" id="div1"></div>
+      <div class="input-msg">
+        <input type="text" id="send-input" placeholder="type something" onfocus="this.value=''"/>
+        <button type="button" onclick="addElement()">Send</button>
+      </div>
+    </div>
+  </main>
+ </html>
